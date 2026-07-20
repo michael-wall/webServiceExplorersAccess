@@ -19,7 +19,8 @@
 - The current logic was smoke tested with cURL and Liferay.Service JavaScript API to ensure that the endpoints are still accessible to a user whose access to the API Explorer is blocked.
 
 ## Headless Explorer ##
-- Calling http://localhost:8080/o/api or similar triggers 2 requests, both are matched by the filter url pattern:
+- Calling http://localhost:8080/o/api or similar may trigger 2 requests, both of which are matched by the filter url pattern:
   - /o/api
   - /o/api/main.css
 - The /o/api/main.css request is always allowed (silently) to avoid unnecessary duplicate user checks.
+- The current logic was smoke tested with cURL to ensure that the endpoints are still accessible to a user whose access to the API Explorer is blocked.
