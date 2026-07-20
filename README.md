@@ -11,8 +11,8 @@
 
 ## JSONWS Explorer ##
 - The JSONWS explorer and the JSONWS endpoints are both accessed from /api/jsonws e.g.
-  - Explorer: http://localhost:8080/api/jsonws or http://localhost:8080/api/jsonws?contextName=audit
-  - A sample Endpoint: http://localhost:8080/api/jsonws/audit.auditevent/get-audit-events-count?companyId=20096
+  - Explorer URL: http://localhost:8080/api/jsonws or http://localhost:8080/api/jsonws?contextName=audit
+  - A sample Endpoint URL: http://localhost:8080/api/jsonws/audit.auditevent/get-audit-events-count?companyId=20096
 - The custom component will block requests where the requestURI matches **/api/jsonws** or **/api/jsonws/** (both case insensitive) or has a request parameter named **contextPath**.
   - It will allow requests to for example /api/jsonws/audit.auditevent/ as that is a legitimate invocation of the web service endpoint.
   - The solution intentionally doesn't restrict access to **/api/jsonws/invoke** as it is used by Liferay.Service JavaScript API to invoke endpoints.
@@ -33,7 +33,7 @@ function(obj) {
 ```
 
 ## Headless Explorer ##
-- Calling http://localhost:8080/o/api or similar may trigger 2 requests, both of which are matched by the filter url pattern:
+- Calling http://localhost:8080/o/api or similar may trigger 2 requests, both of which are matched by the filter url pattern /o/api/*:
   - /o/api
   - /o/api/main.css
 - The /o/api/main.css request is always allowed (silently) to avoid unnecessary duplicate user checks.
