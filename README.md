@@ -7,6 +7,7 @@
 - It was smoke tested in a local Liferay DXP 7.4 U92 with JDK 11 at compile time and runtime.
 - The current simple user logic checks if the users screenName is 'test'. This should be replaced with the required custom logic.
 - Ensure the module and any changes are fully tested in a non-production environment before considering deploying to a production environment.
+- All logging is INFO for testing purposes. Consider changing before deploying in production, otherwise it may generate significant amounts of logging.
 
 ## JSONWS Explorer ##
 - The JSONWS explorer and the JSONWS endpoints are both accessed from /api/jsonws e.g.
