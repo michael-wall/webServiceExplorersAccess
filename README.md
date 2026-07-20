@@ -1,5 +1,5 @@
 ## Introduction ##
-- This custom OSGi module is a ‘proof of concept’ to restrict access to the Headless API Explorer GUI and the JSONWS API Explorer GUI.
+- This custom OSGi module is a ‘proof of concept’ using a filter to restrict access to the Headless API Explorer GUI and the JSONWS API Explorer GUI.
 - It **should not** have any impact on access to the actual web service endpoints themselves.
 
 ## Notes ##
