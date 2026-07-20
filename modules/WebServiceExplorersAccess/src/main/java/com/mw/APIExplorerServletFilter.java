@@ -56,7 +56,7 @@ public class APIExplorerServletFilter extends BaseFilter {
         
         if (!restrictedHeadlessEndpoint) {
             // Means they are accessing the Explorer
-        	// We most not block /api/jsonws/audit.auditevent/get-audit-events-count for example...
+        	// We must not block /api/jsonws/audit.auditevent/get-audit-events-count for example...
             if (request.getRequestURI().equalsIgnoreCase("/api/jsonws") || request.getRequestURI().equalsIgnoreCase("/api/jsonws/")) {
             	restrictedJsonwsEndpoint = true;
             } else if (request.getQueryString().toLowerCase().contains("contentPath".toLowerCase())) {
